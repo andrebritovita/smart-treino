@@ -10,17 +10,19 @@ build/
 
 # Local configuration files
 local.properties
-*.iml
 
 # Android Studio
 .idea/
+*.iml
 .DS_Store
 captures/
 .externalNativeBuild/
 .cxx/
 
-# Firebase (opcional)
-# google-services.json
+# Firebase config
+app/google-services.json
+/.firebase/
 
-# Keystore
+# Keystore files
 *.jks
+*.keystore

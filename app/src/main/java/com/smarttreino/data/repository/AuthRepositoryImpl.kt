@@ -94,7 +94,7 @@ class AuthRepositoryImpl @Inject constructor(
                 return Result.failure(EmailAlreadyInUseException())
             }
             // 3. Para qualquer outro erro (senha fraca, sem internet, etc.),
-            // apenas repassamos o erro original.
+            // repassamos o erro original.
             return Result.failure(e)
         }
     }

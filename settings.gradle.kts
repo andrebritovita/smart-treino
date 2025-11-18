@@ -17,5 +17,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Smart Treino"
+rootProject.name = "SmartTreino"
 include(":app")

@@ -4,10 +4,10 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    id("com.google.dagger.hilt.android")
-    id("com.google.devtools.ksp")
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.firebase.crashlytics)
 }
 
 android {
@@ -21,7 +21,7 @@ android {
     defaultConfig {
         applicationId = "com.smarttreino"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -42,7 +42,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -85,14 +85,18 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    //implementation(libs.androidx.navigation.runtime.ktx)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.androidx.navigation.compose)
+
 
     implementation(libs.androidx.activity.compose)
 
     // Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
 
     // Room
     implementation(libs.room.runtime)
@@ -103,13 +107,17 @@ dependencies {
     implementation(libs.work.runtime.ktx)
 
     // Firebase
+    // Autenticação
     implementation(platform(libs.firebase.bom))
-    implementation(platform("com.google.firebase:firebase-bom:34.5.0"))
     implementation(libs.firebase.auth)
+    implementation(libs.google.services.auth)
+    // Banco de dados
     implementation(libs.firebase.firestore)
+    // Armazenamento
+    implementation(libs.firebase.storage)
     implementation(libs.firebase.messaging)
     implementation(libs.firebase.crashlytics)
-    implementation("com.google.firebase:firebase-analytics")
+    implementation(libs.firebase.analytics)
 
 
     // Ktor + Serialization

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Smart Treino</string>
+    <string name="default_web_client_id">419566136719-033k20of3mau35ippihi10otaedhtgtv.apps.googleusercontent.com</string>
+    <string name="auth_screen_title">Authentication Screen</string>
+    <string name="error_empty_fields">Please fill in all fields.</string>
+    <string name="error_password_too_short">Password must be at least 6 characters long.</string>
+    <string name="error_email_already_in_use">This email is already in use. Try logging in with Google.</string>
+    <string name="error_google_user_not_found">Google user not found.</string>
+    <string name="error_uid_generation">Error generating user identifier.</string>
+    <string name="error_generic">An unexpected error occurred.</string>
+</resources>

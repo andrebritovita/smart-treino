@@ -10,6 +10,7 @@ import com.smarttreino.domain.repository.AuthRepository
 import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 import com.smarttreino.core.constants.FirestoreCollections
+import com.smarttreino.core.util.UserNotFoundException
 
 
 class AuthRepositoryImpl @Inject constructor(
@@ -25,11 +26,12 @@ class AuthRepositoryImpl @Inject constructor(
 
             // 2. Faz o login no Auth usando essa credencial
             val authResult = firebaseAuth
+                // Credencial do Google será associada ao email
                 .signInWithCredential(credential)
                 .await()
 
             // Recupera o usuário para pegar UID, Nome e Email
-            val user = authResult.user ?: throw Exception("Usuário Google não encontrado")
+            val user = authResult.user ?: throw UserNotFoundException()
             val uid = user.uid
 
             // 3. Verificação de Segurança (Lógica de "Upsert")
@@ -73,7 +75,8 @@ class AuthRepositoryImpl @Inject constructor(
                     email,
                     password)
                 .await()
-            val uid = authResult.user?.uid ?: throw Exception("Erro ao obter UID")
+            // Exception() genérica. Será mostrado uma mensagem de erro genérica no else do Viewmodel
+            val uid = authResult.user?.uid ?: throw Exception()
             val userMap = hashMapOf(
                 "uid" to uid,
                 "name" to name,
@@ -94,7 +97,8 @@ class AuthRepositoryImpl @Inject constructor(
                 return Result.failure(EmailAlreadyInUseException())
             }
             // 3. Para qualquer outro erro (senha fraca, sem internet, etc.),
-            // repassamos o erro original.
+            // repassamos o erro original que o firebase lançou.
+            // FirebaseNetworkException (Sem internet), FirebaseTooManyRequestsException (Muitas tentativas), etc.
             return Result.failure(e)
         }
     }

@@ -17,6 +17,7 @@ import javax.inject.Singleton
 @Module // Diz ao Hilt que isso é um módulo de configuração
 @InstallIn(SingletonComponent::class) //Define onde e por quanto tempo os objetos criados vão viver.
 object AuthModule {
+
     @Provides // Diz ao Hilt que essa função cria uma dependência
     @Singleton // Diz ao Hilt que essa será uma instância única no app inteiro
     fun provideFirebaseAuth () : FirebaseAuth {

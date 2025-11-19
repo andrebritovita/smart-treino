@@ -4,7 +4,9 @@ import com.google.firebase.auth.FirebaseUser
 
 interface AuthRepository {
     // Login com o Google
-    suspend fun signInWithGoogle(idToken: String): Result<Boolean>
+    suspend fun signInWithGoogle(
+        idToken: String
+    ): Result<Boolean>
 
     // Cadastro com Email
     suspend fun signUpWithEmail(

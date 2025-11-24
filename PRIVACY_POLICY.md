@@ -84,7 +84,7 @@ O usuário pode solicitar a qualquer momento:
 - Explicação sobre o tratamento
 - Informações sobre compartilhamento
 
-Contato: **[insira e-mail]**
+Contato: **[e-mail]**
 
 ## 8. Cookies e Tecnologias Semelhantes
 O app **não utiliza cookies**, mas utiliza:
@@ -102,4 +102,4 @@ A nova versão será atualizada neste arquivo com a respectiva data.
 
 ## 11. Contato
 Responsável: **André Brito Vita**  
-E-mail: **[insira e-mail]**
+E-mail: **[e-mail]**

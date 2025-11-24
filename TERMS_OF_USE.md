@@ -39,7 +39,7 @@ O usuário tem direito a:
 Para mais detalhes, consulte o arquivo **PRIVACY_POLICY.md**.
 
 Contato para assuntos de privacidade:  
-📩 **[insira seu e-mail aqui]**
+📩 **[e-mai]**
 
 ## 5. Aviso Importante (Responsabilidade Médica)
 O Smart Treino **não substitui profissionais da saúde**.  
@@ -97,4 +97,4 @@ A data de última atualização está indicada no início do documento.
 
 ## 13. Contato
 Responsável: **André Brito Vita**  
-E-mail: **[insira e-mail]**
+E-mail: **[e-mail]**

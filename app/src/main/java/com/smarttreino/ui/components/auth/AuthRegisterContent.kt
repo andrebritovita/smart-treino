@@ -1,11 +1,6 @@
-package com.smarttreino.ui.components
+package com.smarttreino.ui.components.auth
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -17,16 +12,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.navigation.NavHostController
-import androidx.hilt.navigation.compose.hiltViewModel
 import com.smarttreino.R
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -35,11 +25,13 @@ import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.sp
-import com.smarttreino.ui.components.AuthLoginContent
+import com.smarttreino.ui.components.reusables.LoginLinkText
+import com.smarttreino.ui.components.reusables.SmartTreinoTextField
+import com.smarttreino.ui.components.reusables.SocialLoginButton
 
 @Composable
 fun AuthRegisterContent (
@@ -69,13 +61,13 @@ fun AuthRegisterContent (
     ){
         Image(
             painter = painterResource(id = R.drawable.logo_smart_treino),
-            contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+            contentScale = ContentScale.Crop,
             contentDescription = stringResource(R.string.content_description_logo),
-            modifier = androidx.compose.ui.Modifier
+            modifier = Modifier
                 .width(300.dp)
                 .height(220.dp)
         )
-        Spacer(modifier = androidx.compose.ui.Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(32.dp))
         // NAME
         SmartTreinoTextField(
             value = name,
@@ -128,7 +120,7 @@ fun AuthRegisterContent (
             Text(text = stringResource(id = R.string.btn_signup))
         }
 
-        Spacer(modifier = androidx.compose.ui.Modifier.width(4.dp))
+        Spacer(modifier = Modifier.width(4.dp))
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier

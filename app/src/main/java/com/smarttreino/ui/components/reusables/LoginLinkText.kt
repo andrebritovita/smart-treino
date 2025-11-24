@@ -1,4 +1,4 @@
-package com.smarttreino.ui.components
+package com.smarttreino.ui.components.reusables
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

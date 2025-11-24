@@ -1,4 +1,4 @@
-package com.smarttreino.ui.components
+package com.smarttreino.ui.components.reusables
 
 
 

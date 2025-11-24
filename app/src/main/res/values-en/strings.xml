@@ -8,4 +8,21 @@
     <string name="error_google_user_not_found">Google user not found.</string>
     <string name="error_uid_generation">Error generating user identifier.</string>
     <string name="error_generic">An unexpected error occurred.</string>
+    <string name="app_slogan">Your workout, your way. </string>
+    <string name="btn_signin_google">Sign in with Google</string>
+    <string name="btn_signin_email">Sign in with Email</string>
+    <string name="text_no_account">Do not have an account?</string>
+    <string name="text_signup_here">Sign up here</string>
+    <string name="title_welcome_back">Welcome back.</string>
+    <string name="btn_login">Login</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="label_name">Name</string>
+    <string name="label_confirm_password">Confirm password</string>
+    <string name="btn_signup">Sign Up</string>
+    <string name="text_have_account">Sign in with other platforms</string>
+    <string name="text_already_have_account">Already have an account?</string>
+    <string name="text_login">Log in</string>
+    <string name="content_description_logo">Smart Treino Logo</string>
+    <string name="text_google">Google</string>
 </resources>

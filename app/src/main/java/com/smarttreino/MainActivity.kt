@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.navigation.compose.rememberNavController
+import com.smarttreino.ui.screens.auth.AuthScreen
 import com.smarttreino.ui.screens.home.HomeScreen
 import com.smarttreino.ui.theme.SmartTreinoTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -17,7 +19,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SmartTreinoTheme {
-                HomeScreen()
+                val navController = rememberNavController()
+                AuthScreen(navController)
             }
         }
     }
